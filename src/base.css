@@ -1,8 +1,11 @@
+.container {
+  margin: 12px;
+}
 .text-title {
   color: red;
   font-size: 30px;
 }
 .text-body {
-  color: gray;
+  color: blue;
   font-size: 18px;
 }
