@@ -13,9 +13,3 @@
   color: blue;
   font-size: 24px;
 }
-
-.navbar {
-  background-color: white;
-  /* h-offset, v-offset, blur, spread */
-  box-shadow: 2px 4px 8px -5px;
-}
