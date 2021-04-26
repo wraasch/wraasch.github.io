@@ -54,3 +54,33 @@ table {
   height: auto;
   margin: 12px;
 }
+.button-example {
+  background-color: green;
+  border: 1px solid black;
+  width: 100px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+}
+.drugs-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 12px;
+  display: none;
+}
+.diabetes-confirmed {
+  background-color: red;
+  color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 32px;
+  display: none;
+}
+.diabetes-no {
+  color: green;
+  display: none;
+}
+.diabetes-revisit {
+  color: black;
+  display: none;
+}
