@@ -34,9 +34,5 @@ $('#diabetes-algorithm').click(function(){
 // Profile Cookies
 $("#profile-submit").click(function() {
     console.log('PROFILE SUBMIT');
-    Cookies.set("test", "will");
+    Cookies.set("test", "reena");
 });
-// If profile cookie exists, show profile page
-if (Cookies.get("test")) {
-    console.log(Cookies.get("test"));
-}
