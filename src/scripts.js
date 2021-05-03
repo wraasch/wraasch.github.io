@@ -30,9 +30,3 @@ $('#diabetes-algorithm').click(function(){
         $('.diabetes-no').show();
     }
 });
-
-// Profile Cookies
-$("#profile-submit").click(function() {
-    console.log('PROFILE SUBMIT');
-    Cookies.set("test", "reena");
-});
