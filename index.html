@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <nav class="navbar navar-fixed-top">
   <span class="navbar-brand">
@@ -27,11 +28,20 @@
         </ul>
       </li>
     </ul>
+    <div class="translate-navbar" id="google_translate_element"></div>
   </div>
 </nav>
 <body>
   <div class="container">
     <h1 class="text-title">Our Fantastic Team Project!</h1>
     <p class="text-body">Putting more info here eventually...</p>
+    <div>
+      <input id="input-date" type="date">
+    </div>
   </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
 </body>
