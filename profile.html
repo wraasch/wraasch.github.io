@@ -91,7 +91,6 @@
         // If profile cookie exists, show profile page
         if (Cookies.get("profile")) {
             var profileDataFromCookie = Cookies.get("profile");
-            var profileInfo = JSON.parse(profileDataFromCookie);
             // Add profile info into HTML
             $("#insert-profile-name").text(profileInfo["name"]);
             $("#insert-profile-role").text(profileInfo["role"]);
