@@ -34,7 +34,7 @@
 <body>
   <div class="container">
     <h1 class="text-title">My Profile</h1>
-    <form>
+    <form style="display: none;" id="not-logged-in">
       <div>
         <label>What is your name?</label>
         <input type="text" id="name">
@@ -56,6 +56,14 @@
         <input id="profile-submit" class="button-example" type="submit" value="Submit" />
       </div>
     </form>
+    <div style="display: none;" id="logged-in">
+      <h1>Profile</h1>
+      <img id="insert-pic-from-cookie" src="" />
+      <h3>Name</h3>
+      <p id="insert-name-from-cookie"></p>
+      <h3>Role</h3>
+      <p id="insert-role-from-cookie"></p>
+    </div>
   </div>
   <script>
     $('#profile-submit').click(function(){
@@ -68,11 +76,19 @@
       Cookies.set("profileName", profileName);
       Cookies.set("profilePic", profilePic);
       Cookies.set("profileRole", profileRole);
-
-      // If profile cookies exist, show profile
-      if (Cookies.get("profileName")) {
-        console.log("YES");
-      }
     })
+    // If profile cookies exist, show profile
+    if (Cookies.get("profileName")) {
+      $('#logged-in').show();
+      // Insert profile information from browser's saved cookies
+      var cookieName = Cookies.get("profileName")
+      $('#insert-name-from-cookie').text(cookieName);
+      var cookieRole = Cookies.get("profileRole")
+      $('#insert-role-from-cookie').text(cookieRole);
+      var cookiePic = Cookies.get("profilePic")
+      $('#insert-pic-from-cookie').attr("src", cookiePic);
+    } else {
+      $('#not-logged-in').show();
+    }
   </script>
 </body>
