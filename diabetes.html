@@ -46,7 +46,8 @@
         <label class="text-body">Displays symptoms of Diabetes</label>
     </div>
     <div>
-        <button class="button-example">Submit</button>
+        <button id="diabetes-algorithm" class="button-example">Submit</button>
+        <a href="index.html"><button class="button-example">Back</button></a>
     </div>
     <div>
         <h2 class="diabetes-confirmed">YOUR PATIENT HAS DIABETES</h2>
@@ -54,33 +55,5 @@
         <h2 class="diabetes-no">YOUR PATIENT DOES NOT HAVE DIABETES</h2>
     </div>
   </div>
-  <script>
-      $('.button-example').click(function(){
-        // CONSTANTS
-        var dGlucose = 126;
-        var dHbA1C = 48;
-        // INPUTS
-        var glucose = $('#glucose').val();
-        var hba1c = $('#hba1c').val();
-        if ($('#symptoms').is(':checked')) {
-            var symptoms = true;
-        } else {
-            var symptoms = false;
-        }
-        // ALGORITHM
-        if (glucose > dGlucose && hba1c > dHbA1C) {
-            $('.diabetes-confirmed').show();
-        } else if (glucose > dGlucose) {
-            if (symptoms) {
-                $('.diabetes-confirmed').show();
-            } else {
-                $('.diabetes-revisit').show();
-            }
-        } else {
-            $('.diabetes-no').show();
-        }
-      });
-    
-
-  </script>
+  <script src="src/scripts.js"></script>
 </body>

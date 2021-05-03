@@ -84,3 +84,6 @@ table {
   color: black;
   display: none;
 }
+.translate-navbar {
+  margin-top: 24px;
+}
