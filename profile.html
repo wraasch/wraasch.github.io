@@ -1,0 +1,80 @@
+<head>
+    <title>ALS 414 Project Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/base.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="src/scripts.js"></script>
+</head>
+<nav class="navbar navar-fixed-top">
+  <span class="navbar-brand">
+    <img class="navbar-logo" src="images/kgi-logo.jpg">
+  </span>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="medications.html">Medications</a></li>
+      <li><a href="patients.html">Patients</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">Providers</a>
+        <ul class="dropdown-menu">
+          <li><a href="family.html">Family</a></li>
+          <li><a href="diabetes.html">Diabetes</a></li>
+          <li><a href="cancer.html">Cancer</a></li>
+          <li><a href="rare.html">Rare Disease</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="translate-navbar" id="google_translate_element"></div>
+  </div>
+</nav>
+<body>
+    <div class="container">
+      <h1 class="text-title">My Profile</h1>
+      <form class="anonymous-profile">
+        <label for="name">What is your name?</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="pic">Please paste the URL to your image</label>
+        <input type="url" name="pic" id="pic" />
+
+        <label for="role">What is your role?</label>
+        <select name="role" id="role">
+          <option value="patient">Patient</option>
+          <option value="provider">Provider</option>
+          <option value="producer">Producer</option>
+          <option value="payer">Payer</option>
+        </select>
+
+        <span>What diseases would you like to learn about?</span>
+        <label for="diabetes">diabetes</label>
+        <input type="checkbox" class="diabetes" id="diabetes" />
+        <label for="cancer">cancer</label>
+        <input type="checkbox" class="cancer" id="cancer" />
+        <label for="COVID-19">COVID-19</label>
+        <input type="checkbox" class="COVID-19" id="COVID-19" />
+        <label for="IBD">IBD</label>
+        <input type="checkbox" class="IBD" id="IBD" />
+        <input
+          id="profile-submit"
+          class="btn-success submit-btn"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+      <div class="personal-profile">
+        <h3>Profile Pic</h3>
+        <img id="insert-profile-pic" class="profile-pic" src="#" />
+        <h3>Name</h3>
+        <p id="insert-profile-name"></p>
+        <h3>Role</h3>
+        <p id="insert-profile-role"></p>
+        <h3>Disease</h3>
+        <p id="insert-profile-disease"></p>
+      </div>
+    </div>
+  </body>
