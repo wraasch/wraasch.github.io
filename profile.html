@@ -36,35 +36,31 @@
     <div class="container">
       <h1 class="text-title">My Profile</h1>
       <form class="anonymous-profile">
-        <label for="name">What is your name?</label>
-        <input type="text" name="name" id="name" />
-
-        <label for="pic">Please paste the URL to your image</label>
-        <input type="url" name="pic" id="pic" />
-
-        <label for="role">What is your role?</label>
-        <select name="role" id="role">
-          <option value="patient">Patient</option>
-          <option value="provider">Provider</option>
-          <option value="producer">Producer</option>
-          <option value="payer">Payer</option>
-        </select>
-
-        <span>What diseases would you like to learn about?</span>
-        <label for="diabetes">diabetes</label>
-        <input type="checkbox" class="diabetes" id="diabetes" />
-        <label for="cancer">cancer</label>
-        <input type="checkbox" class="cancer" id="cancer" />
-        <label for="COVID-19">COVID-19</label>
-        <input type="checkbox" class="COVID-19" id="COVID-19" />
-        <label for="IBD">IBD</label>
-        <input type="checkbox" class="IBD" id="IBD" />
-        <input
-          id="profile-submit"
-          class="btn-success submit-btn"
-          type="submit"
-          value="Submit"
-        />
+        <div>
+            <label for="name">What is your name?</label>
+            <input type="text" name="name" id="name" />
+        </div>
+        <div>
+            <label for="pic">Please paste the URL to your image</label>
+            <input type="url" name="pic" id="pic" />
+        </div>
+        <div>
+            <label for="role">What is your role?</label>
+            <select name="role" id="role">
+            <option value="patient">Patient</option>
+            <option value="provider">Provider</option>
+            <option value="producer">Producer</option>
+            <option value="payer">Payer</option>
+            </select>
+        </div>
+        <div>
+            <input
+                id="profile-submit"
+                class="btn-success submit-btn"
+                type="submit"
+                value="Submit"
+            />
+        </div>
       </form>
       <div class="personal-profile">
         <h3>Profile Pic</h3>
@@ -80,21 +76,20 @@
     <script>
         // Profile Cookies
         $("#profile-submit").click(function() {
-            // Create dictionary for profile info
-            var profileInfo = {};
             // Set key-value pairs for each profile attribute
-            profileInfo["name"] = $("#name").val();
-            profileInfo["profilePic"] = $("#pic").val();
-            profileInfo["role"] = $("#role").val();
-            Cookies.set("profile", profileInfo);
+            var profileName = $("#name").val();
+            var profilePic = $("#pic").val();
+            var profileRole = $("#role").val();
+            Cookies.set("profileName", profileName);
+            Cookies.set("profilePic", profilePic);
+            Cookies.set("profileRole", profileRole);
         });
         // If profile cookie exists, show profile page
-        if (Cookies.get("profile")) {
-            var profileDataFromCookie = Cookies.get("profile");
+        if (Cookies.get("profileName")) {
             // Add profile info into HTML
-            $("#insert-profile-name").text(profileDataFromCookie["name"]);
-            $("#insert-profile-role").text(profileDataFromCookie["role"]);
-            $("#insert-profile-pic").attr("src", profileDataFromCookie["profilePic"]);
+            $("#insert-profile-name").text(Cookies.get("profileName"));
+            $("#insert-profile-role").text(Cookies.get("profileRole"));
+            $("#insert-profile-pic").attr("src", Cookies.get("profilePic"));
             // Show profile HTML, and hide form
             $(".personal-profile").show();
             $(".anonymous-profile").hide();
