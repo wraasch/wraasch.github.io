@@ -33,6 +33,8 @@ $('#diabetes-algorithm').click(function(){
 
 // Profile Cookies
 $("#profile-submit").click(function() {
+    console.log('PROFILE SUBMIT');
+    Cookies.set("test", "will");
     // Create dictionary for profile info
     var profileInfo = {};
     // Set key-value pairs for each profile attribute
