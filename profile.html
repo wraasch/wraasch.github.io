@@ -92,9 +92,9 @@
         if (Cookies.get("profile")) {
             var profileDataFromCookie = Cookies.get("profile");
             // Add profile info into HTML
-            $("#insert-profile-name").text(profileInfo["name"]);
-            $("#insert-profile-role").text(profileInfo["role"]);
-            $("#insert-profile-pic").attr("src", profileInfo["profilePic"]);
+            $("#insert-profile-name").text(profileDataFromCookie["name"]);
+            $("#insert-profile-role").text(profileDataFromCookie["role"]);
+            $("#insert-profile-pic").attr("src", profileDataFromCookie["profilePic"]);
             // Show profile HTML, and hide form
             $(".personal-profile").show();
             $(".anonymous-profile").hide();
