@@ -29,70 +29,50 @@
         </ul>
       </li>
     </ul>
-    <div class="translate-navbar" id="google_translate_element"></div>
   </div>
 </nav>
 <body>
-    <div class="container">
-      <h1 class="text-title">My Profile</h1>
-      <form class="anonymous-profile">
-        <div>
-            <label for="name">What is your name?</label>
-            <input type="text" name="name" id="name" />
-        </div>
-        <div>
-            <label for="pic">Please paste the URL to your image</label>
-            <input type="url" name="pic" id="pic" />
-        </div>
-        <div>
-            <label for="role">What is your role?</label>
-            <select name="role" id="role">
-            <option value="patient">Patient</option>
-            <option value="provider">Provider</option>
-            <option value="producer">Producer</option>
-            <option value="payer">Payer</option>
-            </select>
-        </div>
-        <div>
-            <input
-                id="profile-submit"
-                class="btn-success submit-btn"
-                type="submit"
-                value="Submit"
-            />
-        </div>
-      </form>
-      <div class="personal-profile">
-        <h3>Profile Pic</h3>
-        <img id="insert-profile-pic" class="profile-pic" src="#" />
-        <h3>Name</h3>
-        <p id="insert-profile-name"></p>
-        <h3>Role</h3>
-        <p id="insert-profile-role"></p>
-        <h3>Disease</h3>
-        <p id="insert-profile-disease"></p>
+  <div class="container">
+    <h1 class="text-title">My Profile</h1>
+    <form>
+      <div>
+        <label>What is your name?</label>
+        <input type="text" id="name">
       </div>
-    </div>
-    <script>
-        // Profile Cookies
-        $("#profile-submit").click(function() {
-            // Set key-value pairs for each profile attribute
-            var profileName = $("#name").val();
-            var profilePic = $("#pic").val();
-            var profileRole = $("#role").val();
-            Cookies.set("profileName", profileName);
-            Cookies.set("profilePic", profilePic);
-            Cookies.set("profileRole", profileRole);
-        });
-        // If profile cookie exists, show profile page
-        if (Cookies.get("profileName")) {
-            // Add profile info into HTML
-            $("#insert-profile-name").text(Cookies.get("profileName"));
-            $("#insert-profile-role").text(Cookies.get("profileRole"));
-            $("#insert-profile-pic").attr("src", Cookies.get("profilePic"));
-            // Show profile HTML, and hide form
-            $(".personal-profile").show();
-            $(".anonymous-profile").hide();
-        }
-    </script>
-  </body>
+      <div>
+        <label>Please paste the URL to your image</label>
+        <input type="url" id="pic">
+      </div>
+      <div>
+        <label>Please select your role:</label>
+        <select id="role">
+          <option value="Patient">Patient</option>
+          <option value="Provider">Provider</option>
+          <option value="Producer">Producer</option>
+          <option value="Payer">Payer</option>
+        </select>
+      </div>
+      <div>
+        <input id="profile-submit" class="button-example" type="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
+  <script>
+    $('#profile-submit').click(function(){
+      // Get inputs from profile form
+      var profileName = $('#name').val();
+      var profilePic = $('#pic').val();
+      var profileRole = $('#role').val();
+
+      // Set Cookies equal to inputs
+      Cookies.set("profileName", profileName);
+      Cookies.set("profilePic", profilePic);
+      Cookies.set("profileRole", profileRole);
+
+      // If profile cookies exist, show profile
+      if (Cookies.get("profileName")) {
+        console.log("YES");
+      }
+    })
+  </script>
+</body>
