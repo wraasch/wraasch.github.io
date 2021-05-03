@@ -63,6 +63,7 @@
       <p id="insert-name-from-cookie"></p>
       <h3>Role</h3>
       <p id="insert-role-from-cookie"></p>
+      <button id='delete-account' class="button-example-red">Delete Account</button>
     </div>
   </div>
   <script>
@@ -90,5 +91,12 @@
     } else {
       $('#not-logged-in').show();
     }
+
+    // Function for deleting cookies
+    $('#delete-account').click(function(){
+      Cookies.remove('profileName');
+      Cookies.remove('profileRole');
+      Cookies.remove('profilePic');
+    });
   </script>
 </body>

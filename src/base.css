@@ -62,6 +62,14 @@ table {
   font-size: 18px;
   color: white;
 }
+.button-example-red {
+  background-color: red;
+  border: 1px solid black;
+  width: 100px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+}
 .drugs-image {
   width: 200px;
   height: auto;
