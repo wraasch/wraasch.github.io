@@ -1,1 +1,56 @@
-/* Add CSS here */
+.container {
+  margin: 48px 12px;
+}
+.text-title {
+  color: black;
+  font-size: 30px;
+}
+.text-body {
+  color: gray;
+  font-size: 18px;
+}
+.text {
+  color: blue;
+  font-size: 24px;
+}
+.navbar {
+  background-color: beige;
+  box-shadow: 2px 4px 8px -5px;
+}
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+.profile-image {
+  height: auto;
+  width: 100%;
+}
+.wrapper {
+  margin: 12px;
+  text-align: center;
+}
+.profile-text {
+  font-size: 26px;
+  color: green;
+}
+li {
+  font-size: 16px;
+  color: blue;
+  margin: 6px;
+  margin-top: 12px;
+}
+table {
+  border: 4px solid black;
+}
+.provider-cells {
+  border: 1px solid black;
+  padding: 6px;
+}
+.provider-header {
+  background-color: yellow;
+}
+.provider-map {
+  width: 75%;
+  height: auto;
+  margin: 12px;
+}
