@@ -1,0 +1,8 @@
+.header_text {
+    font-size: 24px;
+    color: green;
+    font-weight: 800;
+}
+#large_margins {
+    margin: 40px 20px 40px 20px;
+}

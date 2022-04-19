@@ -1,1 +1,22 @@
-/* Add CSS here
+.navbar {
+    background-color: tan;
+    box-shadow: 2px 4px 8px 0;
+    height: 100px;
+}
+.navbar-logo {
+    height: 30px;
+    width; auto;
+    display: inline-block;
+    margin-right: 20px;
+}
+.navbar-nav {
+    display: inline;
+    margin-left: 20px;
+}
+.navbar-element {
+    margin: 12px;
+}
+.navbar-drop {
+    text-decoration: none;
+    color: black;
+}
