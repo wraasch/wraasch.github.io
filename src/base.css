@@ -22,3 +22,11 @@ a {
     text-decoration: none;
     color: black;
 }
+.menu-item {
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 4px;
+    background-color: rgb(191, 213, 218);
+    text-align: center;
+}
