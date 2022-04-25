@@ -1,16 +1,18 @@
+a {
+    margin-top: -16px;
+}
 .navbar {
     background-color: tan;
     box-shadow: 2px 4px 8px 0;
-    height: 100px;
+    height: 70px;
 }
 .navbar-logo {
     height: 30px;
     width; auto;
-    display: inline-block;
+    display: inline;
     margin-right: 20px;
 }
 .navbar-nav {
-    display: inline;
     margin-left: 20px;
 }
 .navbar-element {
