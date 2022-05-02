@@ -71,7 +71,7 @@ $('#submit-input').click(function () {
     location.reload();
 });
 // If there is a cookie, show welcome message
-var userName = Cookies.get('name');
+var userName = Cookies.get('userName');
 if (userName) {
     // Hide new user input form
     $('#new-user-input').hide();
