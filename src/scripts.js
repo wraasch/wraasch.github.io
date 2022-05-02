@@ -60,18 +60,11 @@ information.forEach(function (item, index) {
 // When a user submits the profile creation form, set a cookie
 $('#submit-input').click(function () {
     // Set profile info from inputs
-    var name = $('#name-input').val();
+    var userName = $('#name-input').val();
     var phone = $('#phone-input').val();
     var email = $('#email-input').val();
-    var profile = {
-        'name': name,
-        'phone': phone,
-        'email': email
-    }
-    console.log(profile);
     // Create profile cookie
-    Cookies.set('profile', profile);
-    Cookies.set('name', name);
+    Cookies.set('userName', userName);
     Cookies.set('phone', phone);
     Cookies.set('email', email);
     // Reload page so that cookie can take effect
