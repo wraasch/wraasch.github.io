@@ -38,18 +38,3 @@ $("#calc-diabetes").click(function() {
     }
     
 });
-
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 34.0967, lng: -117.7198 },
-    zoom: 14,
-  });
-}
-
-window.initMap = initMap;
-
-// Cookies
-Cookies.set('name', 'value');
-console.log(Cookies.get());
