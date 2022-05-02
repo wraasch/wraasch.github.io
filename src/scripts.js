@@ -71,14 +71,17 @@ $('#submit-input').click(function () {
     console.log(profile);
     // Create profile cookie
     Cookies.set('profile', profile);
+    Cookies.set('name', name);
+    Cookies.set('phone', phone);
+    Cookies.set('email', email);
     // Reload page so that cookie can take effect
     location.reload();
 });
 // If there is a cookie, show welcome message
-var profile = Cookies.get('profile');
-if (profile) {
+var userName = Cookies.get('name');
+if (userName) {
     // Hide new user input form
     $('#new-user-input').hide();
     // Show welcome message
-    $('#welcome-text').text('Welcome, ' + profile['name']);
+    $('#welcome-text').text('Welcome, ' + userName);
 }
