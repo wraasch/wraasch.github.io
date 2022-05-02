@@ -7,7 +7,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-fixed-top">
@@ -32,44 +31,16 @@
   </nav>
   <div id="large_margins">
     <p class="header_text">
-      ALS 414 Menu of Cool Features
+      ALS 414 Table
     </p>
-    <p id="welcome-text"></p>
-    <button class="click-here-to-toggle">Show Menu</button>
-    <!-- MENU CHOICES -->
-    <div id="menu-items" style="display: none;">
-      <a href="diabetes.html">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 menu-item">
-          <p style="font-size: 20px;">Algorithms</p>
-        </div>
-      </a>
-      <a href="video.html">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 menu-item">
-          <p style="font-size: 20px;">Videos</p>
-        </div>
-      </a>
-      <a href="placeholder.html">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 menu-item">
-          <p style="font-size: 20px;">Maps</p>
-        </div>
-      </a>
-      <a href="placeholder.html">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 menu-item">
-          <p style="font-size: 20px;">Chat</p>
-        </div>
-      </a>
-      <a href="tables.html">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 menu-item">
-          <p style="font-size: 20px;">Tables</p>
-        </div>
-      </a>
-    </div>
-    <!-- BUTTONS -->
-    <div class="col-xs-12">
-      <hr>
-      <button type="button" id="success-alert" class="btn btn-success">Success</button>
-    </div>
-  </div>
+    <table id="data-table">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Position</th>
+            <th>Rank</th>
+        </tr>
+    </table>
   <!-- CUSTOM JAVASCRIPT -->
   <script src="src/scripts.js"></script>
 </body>

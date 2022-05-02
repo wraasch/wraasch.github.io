@@ -30,3 +30,12 @@ a {
     background-color: rgb(191, 213, 218);
     text-align: center;
 }
+th {
+    border: 1px solid black;
+    background-color: yellow;
+}
+td {
+    border: 1px solid black;
+    height: 20px;
+    width: 150px;
+}
