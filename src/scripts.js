@@ -57,6 +57,28 @@ information.forEach(function (item, index) {
 });
 
 // COOKIES
-Cookies.set('user', 'Will');
-var username = Cookies.get('user');
-$('#welcome-text').text(username);
+// When a user submits the profile creation form, set a cookie
+$('#submit-input').click(function () {
+    // Set profile info from inputs
+    var name = $('#name-input').val();
+    var phone = $('#phone-input').val();
+    var email = $('#email-input').val();
+    var profile = {
+        'name': name,
+        'phone': phone,
+        'email': email
+    }
+    console.log(profile);
+    // Create profile cookie
+    Cookies.set('profile', profile);
+    // Reload page so that cookie can take effect
+    location.reload();
+});
+// If there is a cookie, show welcome message
+var profile = Cookies.get('profile');
+if (profile) {
+    // Hide new user input form
+    $('#new-user-input').hide();
+    // Show welcome message
+    $('#welcome-text').text('Welcome, ' + profile['name']);
+}
