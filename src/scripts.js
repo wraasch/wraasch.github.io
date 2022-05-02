@@ -14,3 +14,27 @@ $(".click-here-to-toggle").click(function() {
         alert("Oops!");
       }
 });
+
+// Diabetes algorithm
+$("#calc-diabetes").click(function() {
+    // Setting diabetes thesholds
+    var dGlucose = 126;
+    var dHbA1C = 48;
+    // Calculating diabetes risk
+    var glucose = $("#glucose").val();
+    var HbA1C = $("#HbA1C").val();
+    var symptoms = $("#symptoms").is(":checked");
+    
+    if (glucose > dGlucose && HbA1C > dHbA1C) {
+        alert("YOU HAVE DIABETES");
+    } else if (glucose > dGlucose) {
+        if (symptoms) {
+            alert("YOU HAVE DIABETES");
+        } else {
+            alert("CHECK AGAIN IN 3-6 MONTHS");
+        }
+    } else {
+        alert("CHECK AGAIN IN 3-6 MONTHS");
+    }
+    
+});
