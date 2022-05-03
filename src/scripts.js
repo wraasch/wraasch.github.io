@@ -79,13 +79,14 @@ if (userName) {
     $('#welcome-text').text('Welcome, ' + userName);
 }
 
+// Show Claremont map only when the Claremont button is clicked
 $('#show-claremont').click(function () {
     $('#claremont').show();
 });
 
 // GOOGLE MAPS JS
 let map;
-
+// Map parameters
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 34.0967, lng: -117.7198 },
@@ -94,3 +95,12 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+// Chat box JS
+$('#send-message').click(function () {
+    // Get message from input box
+    var message = $('#chat-message').val();
+    var messageHTML = '<p class="chat-messages">' + message + '</p>';
+    // Append formatted HTML of message to the chat box
+    $('.chat-box').append(messageHTML);
+});
