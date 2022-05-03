@@ -1,0 +1,47 @@
+<head>
+    <title>Will's Project Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/base.css" rel="stylesheet" />
+    <link href="videos/other-css-file.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top">
+    <span class="navbar-brand">
+      <ul class="nav navbar-nav">
+        <li><img class="navbar-logo" src="https://www.kgi.edu//wp-content/uploads/media/GiveWP/kgi-logo-testimonial.jpg"></li>
+        <li class="navbar-element">Home</li>
+        <li class="navbar-element"><a href="videos/about-us.html">About Us</a></li>
+        <li class="navbar-element">Maps</li>
+        <li class="navbar-element">Buttons</li>
+        <li class="navbar-element dropdown">
+          <a class="dropdown-toggle navbar-drop" data-toggle="dropdown">Identity</a>
+          <ul class="dropdown-menu">
+            <li>Patients</li>
+            <li>Providers</li>
+            <li>Payers</li>
+            <li>Producers</li>
+          </ul>
+        </li>
+      </ul>
+    </span>
+  </nav>
+  <div id="large_margins">
+    <p class="header_text">
+      ALS 414 Maps
+    </p>
+    <a href="index.html"><button>Back</button></a>
+    <button id="show-claremont">Claremont</button>
+    <div id='claremont' style="display: none;">
+        <h3>Where we live</h3>
+        <div id="map" style="border: 2px solid black; border-radius: 4px; width: 400px; height: 400px; box-shadow: 2px 1px 1px 1px gray;"></div>
+    </div>
+  </div>
+  <!-- CUSTOM JAVASCRIPT -->
+  <script src="src/scripts.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+</body>

@@ -78,3 +78,19 @@ if (userName) {
     // Show welcome message
     $('#welcome-text').text('Welcome, ' + userName);
 }
+
+$('#show-claremont').click(function () {
+    $('#claremont').show();
+});
+
+// GOOGLE MAPS JS
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 34.0967, lng: -117.7198 },
+    zoom: 14,
+  });
+}
+
+window.initMap = initMap;
